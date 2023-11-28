@@ -1,0 +1,32 @@
+<?php
+
+namespace App\Enums;
+
+enum Actions
+{
+
+  case SIGN_UP_STORED;
+
+  case LOGIN;
+  case USER_OR_PASSWORD_INVALID;
+
+  case LOGOUT;
+
+  case UPLOAD_IS_FINISHED;
+
+  case START_DATA_PROCESSING;
+  case END_DATA_PROCESSING;
+
+  case QUERY_DATA_MAIOR_E_MENOR_QUANTIDADE_MOVIMENTAÇÃO;
+  case QUERY_DATA_MAIOR_E_MENOR_SOMA_MOVIMENTAÇÃO;
+  case QUERY_DIA_SEMANA_MAIS_MOVIMENTACAO_RX1_PX1;
+  case QUERY_QUANTIDADE_E_VALOR_POR_COOP_AGENCIA;
+  case QUERY_RELACAO_CREDITO_DEBITO_HORAS_DIA;
+
+  case ERRORS;
+
+  public function getAction()
+  {
+    return $this->name;
+  }
+}
